@@ -27,7 +27,7 @@
       <br>
       <br />
       <center><h5 id="mode" style="display: none; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Mode of Transport: Walking</h5></center>
-      <center><h5 >Your Reward Points: <span name="reward"></span></h5></center>
+      <center><h5 id="Reward" style="display: none; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Your Reward Points: <span id="reward">0</span></h5></center>
     </div>
     <br />
     <center><div class="container" id="map">
@@ -60,10 +60,13 @@
   };
 
   setTimeout(showMode, 5000); 
+  reward = document.getElementById("reward");
   function increaseReward() {
-  reward = (parseInt(reward)+2).toString();
+  reward.innerHTML = (parseInt(reward.innerHTML)+2).toString();
+  // console.log(reward.innerHTML);
   };
   function addReward() {
+    document.getElementById("Reward").style.display = "block";
     setInterval(increaseReward, 2000);
   };
   setTimeout(addReward, 5000);
