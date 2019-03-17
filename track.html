@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>MoveGreen</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -24,18 +24,18 @@
       <button class="btn btn-success btn-lg">START</button>
     </div>
     <div class="container">
-      <h5>Current Location:</h5>
+      <br>
       <br />
-      <h5>Mode of Transport:</h5>
+      <center><h5 id="mode" style="display: none; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Mode of Transport: Walking</h5></center>
     </div>
     <br />
-    <div class="container" id="map">
+    <center><div class="container" id="map">
       <h5>Map:</h5>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.583105385621!2d77.53232771522403!3d12.934494790880219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e468d8d36d3%3A0x694d74f6ac640acf!2sPES+University!5e0!3m2!1sen!2sin!4v1552776633036" width="300" height="200" frameborder="0" style="border:0"></iframe></br>
-    <div class="container text-center">
+    <div class="container text-center"><br>
       <button class="btn btn-danger btn-lg">STOP</button>
     </div>
-    </div>
+    </div></center>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -53,4 +53,11 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <script>
+  function showMode(){  
+  document.getElementById("mode").style.display = "block";
+  }
+
+  setTimeout(showMode, 5000); 
+  </script>
 </html>
